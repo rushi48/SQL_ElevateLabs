@@ -30,7 +30,7 @@ The structure is modified with additional columns and rows for this task.
 ## 📁 Files Included
 
 | File Name     | Description                                 |
-|---------------|---------------------------------------------|
+|employees.sql|Contains commands used to create relevant table|
 | Task_04.sql   | Contains SQL commands to manipulate and analyze data |
 | README.md     | Project overview and execution instructions |
 
