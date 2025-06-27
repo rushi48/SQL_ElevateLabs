@@ -1,6 +1,3 @@
-# Prepare README.md content based on the uploaded Task_04.sql file
-
-readme_content = """
 # 📊 Task 4: Aggregate Functions and Grouping
 
 ## 🧠 Objective
