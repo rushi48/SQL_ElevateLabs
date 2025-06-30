@@ -1,76 +1,45 @@
-# Prepare README.md content based on the uploaded Task_04.sql file
+# 🎓 Task 5: SQL Joins - Student-Course Management
 
-readme_content = """
-# 📊 Task 4: Aggregate Functions and Grouping
-
-## 🧠 Objective
-To demonstrate the use of SQL aggregate functions and grouping techniques to summarize and analyze employee data.
+This project demonstrates various SQL JOIN operations using a student-course relational schema. The goal is to explore different types of joins including INNER, LEFT, RIGHT, FULL OUTER, CROSS, and SELF JOIN using real-world student and course data.
 
 ---
 
-## 🧰 Tools Used
-- MySQL Workbench 
-- GitHub
+## 🗂️ Tables Used
+
+### 1. Students
+| Column       | Type    | Description             |
+|--------------|---------|-------------------------|
+| student_id   | INT     | Primary Key             |
+| student_name | VARCHAR | Name of the student     |
+| age          | INT     | Age of the student      |
+
+### 2. Courses
+| Column       | Type    | Description                          |
+|--------------|---------|--------------------------------------|
+| course_id    | INT     | Primary Key                          |
+| student_id   | INT     | Foreign Key (references Students)    |
+| course_name  | VARCHAR | Name of the course                   |
+| department   | VARCHAR | Department offering the course       |
 
 ---
 
-## 🧪 Database Structure
+## 🔗 SQL Joins Implemented
 
-Table: `employees`
-
-| Column      | Type         | Description                     |
-|-------------|--------------|---------------------------------|
-| employeeId  | INT          | Primary Key                     |
-| name        | VARCHAR(100) | Employee name                   |
-| department  | VARCHAR(50)  | Department of the employee      |
-| salary      | INT          | Salary of the employee          |
-| Gender      | VARCHAR(50)  | Gender (Male/Female)            |
-
-The structure is modified with additional columns and rows for this task.
+- ✅ INNER JOIN: Students with their enrolled courses and departments
+- ✅ LEFT JOIN: All students (even if not enrolled in a course)
+- ✅ RIGHT JOIN: All courses (even if no student is enrolled)
+- ✅ FULL OUTER JOIN: All students and all courses, matched when possible
+- ✅ SELF JOIN: Students with the same age
 
 ---
 
-## 📁 Files Included
+## 🧠 What I Learned
 
-| File Name     | Description                                 |
-|---------------|---------------------------------------------|
-| Task_04.sql   | Contains SQL commands to manipulate and analyze data |
-| README.md     | Project overview and execution instructions |
+- The importance of choosing the right JOIN to avoid data loss
+- How to handle unmatched data using OUTER JOINs
+- Differences between LEFT, RIGHT, and FULL OUTER JOIN
+- How to simulate FULL OUTER JOIN using UNION in MySQL
+- Practical use of SELF JOIN for comparing within the same table
+- How CROSS JOIN can result in a Cartesian product and its implications
 
----
 
-## 📋 Key SQL Features Used
-
-- COUNT()
-- SUM()
-- AVG()
-- ROUND()
-- GROUP BY
-- HAVING
-- ORDER BY
-- DISTINCT
-
----
-
-## 📊 Sample Queries Included
-
-```sql
--- Total number of employees
-SELECT COUNT(*) AS Total_employees FROM employees;
-
--- Average salary per department
-SELECT department, ROUND(AVG(salary), 2) AS Avg_Salary
-FROM employees
-GROUP BY department;
-
--- Employees grouped by gender
-SELECT gender, COUNT(*) AS Gender_Count
-FROM employees
-GROUP BY Gender;
-
--- Department with highest average salary
-SELECT department, AVG(salary) AS avg_salary
-FROM employees
-GROUP BY department
-ORDER BY avg_salary DESC
-LIMIT 1;
