@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 # 🎓 Task 5: SQL Joins - Student-Course Management
 
 This project demonstrates various SQL JOIN operations using a student-course relational schema. The goal is to explore different types of joins including INNER, LEFT, RIGHT, FULL OUTER, CROSS, and SELF JOIN using real-world student and course data.
+=======
+# 📊 Task 4: Aggregate Functions and Grouping
+
+## 🧠 Objective
+To demonstrate the use of SQL aggregate functions and grouping techniques to summarize and analyze employee data.
+>>>>>>> bd8ad3b1d2db043bbadddb1d386f131d576b02f1
 
 ---
 
@@ -35,11 +42,18 @@ This project demonstrates various SQL JOIN operations using a student-course rel
 
 ## 🧠 What I Learned
 
+<<<<<<< HEAD
 - The importance of choosing the right JOIN to avoid data loss
 - How to handle unmatched data using OUTER JOINs
 - Differences between LEFT, RIGHT, and FULL OUTER JOIN
 - How to simulate FULL OUTER JOIN using UNION in MySQL
 - Practical use of SELF JOIN for comparing within the same table
 - How CROSS JOIN can result in a Cartesian product and its implications
+=======
+| File Name     | Description                                 |
+|employees.sql|Contains commands used to create relevant table|
+| Task_04.sql   | Contains SQL commands to manipulate and analyze data |
+| README.md     | Project overview and execution instructions |
+>>>>>>> bd8ad3b1d2db043bbadddb1d386f131d576b02f1
 
 
